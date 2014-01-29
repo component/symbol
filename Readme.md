@@ -35,6 +35,12 @@
 
 Creates a new symbol.
 
+## Usage as a polyfill for native Symbols
+
+    if (typeof window.Symbol == 'undefined') {
+      window.Symbol = require('symbol');
+    }
+
 ## Implementation Considerations
 
 The implementation is based on an example on the WebReflection blog, by Andrea Giammarchi:
