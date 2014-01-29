@@ -1,0 +1,16 @@
+{
+  "name": "symbol",
+  "repo": "component/symbol",
+  "description": "es6-like symbols",
+  "version": "0.0.1",
+  "keywords": [],
+  "dependencies": {
+    "component/uid": "*"
+  },
+  "development": {},
+  "license": "MIT",
+  "main": "index.js",
+  "scripts": [
+    "index.js"
+  ]
+}
