@@ -44,7 +44,7 @@ Symbol.prototype.dispose = function() {
 
 /**
  * Returns a `set` function. This is so that *only* this closure will be
- * retained in memory. Leaving the actual `Symbol` instance to be elidgible
+ * retained in memory. Leaving the actual `Symbol` instance to be eligible
  * for garbage collection.
  */
 
