@@ -35,6 +35,13 @@
 
 Creates a new symbol.
 
+### Symbol#dispose()
+
+Disposes the symbol, releasing the global resources used by it.
+
+This is only really needed when using a large number of short-lived, disposable `Symbol` objects.
+Please refer to the *"Implementation Considerations"* and *"Memory Leak"* sections below for more details.
+
 ## Usage as a polyfill for native Symbols
 
     if (typeof window.Symbol == 'undefined') {
@@ -58,8 +65,11 @@ and non-enumerable.
 ### Memory Leak
 
 **Important:** While collisions or changes in behavior will not be triggered by the presence of the
-global property for the reasons stated above, its value will never be released, so this specific 
-implementation will leak memory over time if used for a very large number of disposable Symbol objects.
+global property for the reasons stated above, its value will not be automatically released, so this specific 
+implementation will by default leak memory over time if used for a very large number of disposable `Symbol` objects.
+
+If you need to use a large number of disposable `Symbol` objects, make sure to manually call the `dispose()` method
+on each of them before disposing them.
 
 ## License
 

@@ -21,7 +21,6 @@ function Symbol() {
   // since it's unique and non-enumerable
   Object.defineProperty(Object.prototype, __key__, {
     enumerable: false,
-    configurable: false,
     get: function() {},
     set: function(value) {
       // Store the received value and mark it as non-enumerable
@@ -41,6 +40,14 @@ function Symbol() {
 
 Symbol.prototype.toString = function() {
   return this.__key__;
+}
+
+/**
+ * Disposes the global Object.prototype property associated with this symbol
+ */
+
+Symbol.prototype.dispose = function() {
+  delete Object.prototype[this.__key__];
 }
 
 module.exports = Symbol;
