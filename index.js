@@ -1,9 +1,5 @@
 var uid = require('uid');
 
-function noop() {
-  // do nothing
-}
-
 /**
  * Creates a new Symbol object
  */
