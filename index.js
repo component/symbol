@@ -31,7 +31,7 @@ function Symbol() {
         value: value
       });
     }
-  })
+  });
 }
 
 /**
@@ -40,7 +40,7 @@ function Symbol() {
 
 Symbol.prototype.toString = function() {
   return this.__key__;
-}
+};
 
 /**
  * Disposes the global Object.prototype property associated with this symbol
@@ -48,6 +48,6 @@ Symbol.prototype.toString = function() {
 
 Symbol.prototype.dispose = function() {
   delete Object.prototype[this.__key__];
-}
+};
 
 module.exports = Symbol;
