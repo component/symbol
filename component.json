@@ -3,7 +3,7 @@
   "repo": "component/symbol",
   "description": "es6-like symbols",
   "version": "0.0.1",
-  "keywords": [],
+  "keywords": ["symbols", "es6", "private"],
   "dependencies": {
     "component/uid": "*"
   },
