@@ -50,7 +50,7 @@ function setter (key) {
     Object.defineProperty(this, key, {
       enumerable: false,
       configurable: true,
-      writeable: true,
+      writable: true,
       value: value
     });
   };
